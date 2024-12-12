@@ -7,7 +7,6 @@ async function main() {
     const [deployer] = await ethers.getSigners()
     
     // This is sepolia test token
-
     const instanceHenloToken = await ethers.deployContract('henlo');
     await instanceHenloToken.waitForDeployment()
     console.log(`HenloPresale contract is deployed. Token address: ${instanceHenloToken.target}`)
@@ -28,7 +27,7 @@ async function main() {
     // Waiting for the contract deployment to be confirmed on the blockchain.
     await instanceHenloPresale.waitForDeployment()
 
-    // Logging the address of the deployed My404 contract.
+    // Logging the address of the deployed Presale contract.
     console.log(`HenloPresale contract is deployed. Token address: ${instanceHenloPresale.target}`)
 
     
